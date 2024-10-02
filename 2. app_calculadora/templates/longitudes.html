@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<center>
+<h1 class="py-3">Calculadora de longitudes <img src="static/img/metro.png" alt="" width="55px"></h1>
+<h5>Ingresar los metros</h5>
+
+<form action="/longitudes" method="POST">
+
+<div class="row justify-content-center">
+    <div class=" py-5 col-4 justify-content-center">
+        <input type="number" class="form-control" name="metros" placeholder="Ingrese los metros" aria-label="Ingrese el numero de dolares" required>
+    </div>
+</div>
+<div class="row py-">
+</div>
+<center>  
+    <div class="col-md-12">
+    <button type="submit" class="btn btn-outline-primary border1"><h5>Guardar</h5></button>
+</div>
+</center>
+</form>
+</center>
+<div class="row py-2 ">
+    <div class="col py-2">
+        <h3>La cantidad en centimetros es: {{total_centimetros}}</h3>
+        <h3>La cantidad en Kilometros es: {{total_kilometros}}</h3>
+    </div>
+</div>
+
+{% endblock%}
