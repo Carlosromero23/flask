@@ -49,6 +49,7 @@ def lista_empleados():
 def detalleEmpleado(idEmpleado=None):
     if 'conectado' in session:
        #verificamos si el parametro idEmpleado es None o no esta presente en la URL
+        if idEmpleado is None:
         return redirect(url_for('inicio'))
     
     else: 
