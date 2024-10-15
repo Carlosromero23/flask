@@ -75,6 +75,7 @@ def viewEditarEmpleado(id):
             return render_template(f'{PATH_URL}/form_empleado_update.html', respuestaEmpleado=respuestaEmpleado)
         else:
             flash('El empleado no existe.', 'error')
+            return redirect(url_for('inicio'))
 
     else: 
         flash('Primero debes Iniciar sesion.','error')
